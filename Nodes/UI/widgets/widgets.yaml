@@ -2,3 +2,4 @@ Name: widgets
 Type: FolderType
 Children:
 - File: menu/menu.yaml
+- File: screens/screens.yaml

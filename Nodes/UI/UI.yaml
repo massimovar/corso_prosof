@@ -173,6 +173,13 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 15.0
+    - Name: MainMenuBtnLabel
+      Type: LabelStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffa500"
   - Name: RadioButtonStyles
     Type: BaseObjectType
     Children:
@@ -205,6 +212,7 @@ Children:
   - Name: VirtualKeyboard
     Type: BaseDataVariableType
     DataType: VirtualKeyboardEngineTypeEnum
+    Value: 2
   - Name: StartWindow
     Type: NodePointer
     DataType: NodeId

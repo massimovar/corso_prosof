@@ -1,0 +1,7 @@
+Tipo: Outlined
+Fill: 0Weight: 400Grade: 0Optical Size: 48
+
+
+Material Icons (NO SYMBOLS!!)
+Density: 1x
+Size: 24dp
