@@ -162,6 +162,17 @@ Children:
     Children:
     - Name: Default
       Type: LabelStyle
+    - Name: WarningLabel
+      Type: LabelStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffff00"
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 15.0
   - Name: RadioButtonStyles
     Type: BaseObjectType
     Children:
@@ -230,7 +241,6 @@ Children:
   - Name: Width
     Type: BaseDataVariableType
     DataType: Size
-    ModellingRule: Optional
     Value: 1920.0
   - Name: Height
     Type: BaseDataVariableType
@@ -245,5 +255,88 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/corso_prosof@BrowseName"
-- File: Screens/Screens.yaml
+  - Name: PanelLoader1
+    Type: PanelLoader
+    Children:
+    - Name: Panel
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/corso_prosof/UI/Screens/OP7/Home7"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{#WindowsWidth} > 800"
+            - Name: ns=2;SourceWindowsWidth
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Width"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "/Objects/corso_prosof/UI/Screens/OP12/Home12"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "/Objects/corso_prosof/UI/Screens/OP7/Home7"
+    - Name: CurrentPanel
+      Type: NodePointer
+      DataType: NodeId
+      AccessLevel: Read
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+    - Class: Reference
+      Target: ns=3;i=478
+      Direction: Forward
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
 - File: Keyboards/Keyboards.yaml
+- File: Screens/Screens.yaml
+- File: widgets/widgets.yaml

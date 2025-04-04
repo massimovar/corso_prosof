@@ -30,15 +30,15 @@ Project:
    Module: FTOptix.Retentivity
    Version: 1.0
  Statistics:
-  TotalNodeCount: 124
-  Objects: 72
-  ObjectTypes: 1
-  Variables: 51
+  TotalNodeCount: 330
+  Objects: 128
+  ObjectTypes: 5
+  Variables: 197
   VariableTypes: 0
   DataTypes: 0
   Methods: 0
-  References: 0
+  References: 3
   ReferenceTypes: 0
-  Files: 22
+  Files: 28
  Nodes:
  - File: Nodes/corso_prosof.yaml

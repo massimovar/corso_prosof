@@ -1,2 +1,5 @@
 Name: Screens
 Type: ScreensCategoryFolder
+Children:
+- File: OP7/OP7.yaml
+- File: OP12/OP12.yaml
